@@ -94,8 +94,12 @@ p{
 .about_contanier > img{
 	display: block;
 	float:left;
+	height:55%;
+	width:25%;
+	min-height:%40;
+	min-width:20%;
 	max-width:30%;
-	height: auto;
+	max-height:50%;
 }
 .about_right_side{
 	position:relative;
@@ -139,8 +143,7 @@ a[title="gmail"]:hover .gmail-content {
 	position:relative;
 	float:left;
 	top:50px;
-	right:5px;
-	left:0px;
+	left:3%;
 	height:500px;
 	width:45%;
 	min-width:40%;
