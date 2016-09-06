@@ -94,9 +94,7 @@ p{
 .about_contanier > img{
 	display: block;
 	float:left;
-	max-width:600px;
-	max-height:500px;
-	width: auto;
+	max-width:30%;
 	height: auto;
 }
 .about_right_side{
@@ -106,7 +104,7 @@ p{
 	float:right;
 	right:30px;
 	height:200px;
-	width:400px;
+	width:20%;/*400px-*/
 	background-color:#fff;
 }
 .about_buttons{
@@ -114,7 +112,9 @@ p{
 	display: inline-block;
 	padding-top:8px;
 	height:52px;
-	width:300px;
+	max-width:300px;
+	min-width:200px;
+	width:80%;/*300*/
 	border-color:#09f;
 	border-style:solid;
 }
