@@ -97,9 +97,9 @@ p{
 	height:55%;
 	width:25%;
 	min-height:%40;
-	min-width:20%;
+	min-width:25%;
 	max-width:30%;
-	max-height:50%;
+	max-height:55%;
 }
 .about_right_side{
 	position:relative;
@@ -130,7 +130,7 @@ p{
     display: none;
     position: absolute;
     background-color: #fff;
-	left:50px;
+	left:10px;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
