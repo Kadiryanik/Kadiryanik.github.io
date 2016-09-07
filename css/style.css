@@ -81,9 +81,8 @@ a{
   width: 100%;
   min-height:100%;
   text-align:center;
-  /*padding-top:200px;
-  clear: both;*/
-  
+  padding-top:200px;
+  clear: both;
 }
 .index_content{
 	margin:auto;
