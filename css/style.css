@@ -17,7 +17,6 @@ body {
   position: relative;
   margin:0;
   background-color:#ffffff;
-  padding-bottom: 6rem;
   min-height: 100%;
   min-width: 100%;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -25,6 +24,7 @@ body {
 p{
   text-indent:20px; 
 }
+/*--------------------------defaults-----------------------------*/
 .allinthis {
   margin: 0 auto;
   padding-top:0px;
@@ -33,6 +33,110 @@ p{
   width: 100%;
   clear: both;
 }
+.contanier{
+	margin:55 auto;
+	min-height:600px;
+	width:85%;
+	background-color:#fff;/*degiscek f9f9f0*/
+	z-index:3;
+	clear: both;
+}
+.isabout{
+	position:relative;
+	margin:0 auto;
+	top:50px;
+	width:90%;
+	min-height:400px;
+	background-color:#f4f4f4;
+	z-index:4;
+	text-align:center;
+	clear: both;
+}
+.isabout img{
+	display: block;
+	max-width:400px;
+	max-height:400px;
+	width: auto;
+	height: auto;
+}
+.content{
+	position:relative;
+	margin:100px auto;
+	width:90%;
+	min-height:200px;
+	background-color:#f4f4f4;
+	z-index:4;
+	clear: both;
+}
+
+a{
+	text-decoration:none;
+}
+/*-------------------------index-start------------------------------*/
+.index_allinthis{
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  background-image:url("../img/background.jpg");
+  width: 100%;
+  min-height:100%;
+  text-align:center;
+  padding-top:200px;
+  clear: both;
+}
+.index_content{
+	margin:auto;
+	top:200px;
+	height:300px;
+	width:605px;
+	color:#fff;
+	text-align:center;
+}
+.index_content > h1{
+	font-size:50px;
+}
+.index_buttons ul {
+	padding-left:75px;
+    list-style-type: none;
+    overflow: hidden;
+}
+.index_buttons{
+	position:relative;
+	font-size:14;
+	height:90px;
+	padding-top:5px;
+	width:100%;
+	min-width:605px;
+	clear: both;
+}
+.index_buttons li {
+	padding-right:75px;
+    float: left;
+}
+
+.index_buttons li a {
+	border-radius:8%;
+    display: block;
+    color: #fff;
+    padding: 14px 16px;
+	border: 1px solid #ddd;
+	background-color:#e18d3f;/*e18d3f*/
+    text-decoration: none;
+	min-width:100px;
+    transition: 0.4s;
+}
+
+.index_buttons li a:hover:not(.active) {
+    /*background-color: #ca7e38;*/
+	background-color:#ffff00;
+}
+
+.index_buttons li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+/*---------------------------index End------------------------------*/
+/*---------------------------Header Start---------------------------*/
 .header{
 	font-size:14;
 	top:0px;
@@ -43,7 +147,6 @@ p{
 	z-index:15;
 	clear: both;
 }
-/*------------------------------------------------------------------*/
 .header ul {
     list-style-type: none;
     margin: 0;
@@ -73,16 +176,9 @@ p{
     color: white;
     background-color: #4CAF50;
 }
-/*------------------------------------------------------------------*/
-.contanier{
-	margin:55 auto;
-	min-height:600px;
-	width:85%;
-	background-color:#fff;/*degiscek f9f9f0*/
-	z-index:3;
-	clear: both;
-}
-/**-About Page-**/
+/*---------------------------Header End-----------------------------*/
+
+/*--------------------------About Page------------------------------*/
 .about_contanier{
 	margin:55 auto;
 	min-height:600px;
@@ -149,39 +245,23 @@ a[title="gmail"]:hover .gmail-content {
 	min-width:40%;
 	background-color:#fff;/*degiscek efefef*/
 }
-/**--**/
-.isabout{
-	position:relative;
-	margin:0 auto;
-	top:50px;
-	width:90%;
-	min-height:400px;
-	background-color:#f4f4f4;
-	z-index:4;
-	text-align:center;
-	clear: both;
-}
-.isabout img{
-	display: block;
-	max-width:400px;
-	max-height:400px;
-	width: auto;
-	height: auto;
-}
-.content{
-	position:relative;
+/*-------------------------About end--------------------------------*/
+/*-------------------------Works start------------------------------*/
+.works_content{
 	margin:100px auto;
-	width:90%;
-	min-height:200px;
-	background-color:#f4f4f4;
-	z-index:4;
-	clear: both;
+	width:100%;
+	height:100px;
+	text-align:center;
 }
-
-a{
-	text-decoration:none;
+/*-------------------------Works end-------------------------------*/
+/*-------------------------Team start------------------------------*/
+.team_content{
+	margin:100px auto;
+	width:100%;
+	height:100px;
+	text-align:center;
 }
-
+/*-------------------------Team end-------------------------------*/
 /*Footer Styles*/
 .footer {
   font-size:12px;
