@@ -123,15 +123,14 @@ a{
     color: #fff;
     padding: 14px 16px;
 	border: 1px solid #ddd;
-	background-color:#333;/*e18d3f*/
+	background-color:#333;
     text-decoration: none;
 	min-width:100px;
     transition: 0.4s;
 }
 
 .index_buttons li a:hover:not(.active) {
-    /*background-color: #ca7e38;*/
-	background-color:#e18d3f;
+	background-color:#09f;
 }
 
 .index_buttons li a.active {
