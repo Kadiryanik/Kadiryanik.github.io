@@ -1,0 +1,61 @@
+/* Usage
+<div id="menucon">
+	<div id="announcement-tex">
+		<br/><b>DUYURU</b><br/><br/>Sitemize Hoşgeldiniz!<br/><br/>kadiryanik.me 
+		tarafından sitemiz için hazırlanan bu duyuru panosunda sitemize dair en güncel yenilikleri paylaşacağız!
+	</div>
+</div>
+*/
+
+/*      Telif hakkı: koddostu.com        */
+
+#menucon{ 
+	position:fixed; 
+	bottom:65px; 
+	left:10px; 
+	width:90px;
+	height:90px; 
+	background:transparent url(../img/see.png) no-repeat center center; 
+	transition: all 0.8s ease-in-out; 
+	background-size:cover; 
+	-webkit-transition: all 0.8s ease-in-out; 
+	transition-timing-function:ease-in-out; 
+	-webkit-transition-timing-function:ease-in-out; 
+} 
+#menucon:hover{ 
+	bottom:90px;
+	left:25px; 
+	width:50px;
+	height:50px; 
+	transform: rotate(720deg); 
+	-ms-transform: rotate(720deg); 
+	-webkit-transform: rotate(720deg); 
+}
+#announcement-tex{
+	position:absolute;
+	bottom:37px;
+	left:38px; 
+	box-shadow: -1px 1px 5px 0px #888888; 
+	transition: all 0.8s ease-in-out; 
+	-webkit-transition: all 0.8s ease-in-out; 
+	transition-timing-function:ease-in-out; 
+	line-height:22px; 
+	-webkit-transition-timing-function:ease-in-out; 
+	opacity:0; 
+	width:0px;
+	height:0px; 
+	padding:6px;
+	color:#fff; 
+	font-family:Helvetica, Arial, sans-serif; 
+	font-weight:normal; 
+	text-decoration:none; 
+	font-size:14px; 
+	text-align:center; 
+	-webkit-border-radius: 8px; 
+	-webkit-border-bottom-left-radius: 0;
+	border-radius: 8px; 
+	border-bottom-left-radius: 0; 
+	}
+
+#menucon:hover 
+#announcement-tex{ width:200px;height:250px; background:#444; opacity:0.6;} 
