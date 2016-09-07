@@ -143,6 +143,7 @@ a{
 	top:0px;
 	height:40px;
 	width:100%;
+	min-width:500px;
 	position:fixed;
 	background-color:#fff;
 	z-index:15;
