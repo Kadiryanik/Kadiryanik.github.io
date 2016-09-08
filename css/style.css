@@ -254,20 +254,9 @@ a{
 	border-style:solid;
 }
 .about_buttons img{	
-	padding-right:8px;
+	padding-left:3px;
+	padding-right:3px;
 	border-radius: 30%;
-}
-.gmail-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-	left:10px;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-}
-a[title="gmail"]:hover .gmail-content {
-    display: block;
 }
 
 .about_info{
