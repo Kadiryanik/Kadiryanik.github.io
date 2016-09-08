@@ -171,7 +171,8 @@ a{
 }
 
 .header li a:hover:not(.active) {
-    background-color: #ddd;
+    color:white;
+	background-color: #09f;/*ddd*/
 }
 
 .header li a.active {
