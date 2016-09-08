@@ -96,7 +96,16 @@ a{
 	text-align:center;
 }
 .index_content > h1{
+	color:#333;
+	text-shadow: -2px 0 #09f, 0 1px #09f, 1px 0 #09f, 0 -1px #09f;
 	font-size:50px;
+	transition: 0.4s;
+}
+.index_content > h1:hover:not(.active) {
+	color:#333;
+	text-shadow: -1px 0 #09f, 0 1px #09f, 2px 0 #09f, 0 -1px #09f;
+	font-size:50px;
+	transition: 0.4s;
 }
 .index_buttons ul {
 	padding-left:75px;
@@ -146,6 +155,7 @@ a{
   padding: 10px;
   color:#09f;
   text-align: center;
+  transition:0.4s;
 }
 .index_footer:hover:not(.active) {
   font-size:12px;
@@ -157,7 +167,6 @@ a{
   background-color:#09f;
   color:#fff;
   text-align: center;
-  transition:0.4s;
 }
 /*---------------------------index End------------------------------*/
 /*---------------------------Header Start---------------------------*/
