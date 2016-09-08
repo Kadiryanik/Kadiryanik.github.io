@@ -137,6 +137,28 @@ a{
     color: white;
     background-color: #4CAF50;
 }
+.index_footer {
+  font-size:10px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color:#09f;
+  text-align: center;
+}
+.index_footer:hover:not(.active) {
+  font-size:12px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color:#09f;
+  color:#fff;
+  text-align: center;
+  transition:0.4s;
+}
 /*---------------------------index End------------------------------*/
 /*---------------------------Header Start---------------------------*/
 .header{
@@ -216,14 +238,14 @@ a{
 	display: inline-block;
 	padding-top:8px;
 	height:52px;
-	max-width:300px;
-	min-width:200px;
-	width:80%;/*300*/
+	max-width:200px;
+	min-width:150px;
+	width:70%;/*300*/
 	border-color:#09f;
 	border-style:solid;
 }
 .about_buttons img{	
-	padding-right:5px;
+	padding-right:8px;
 	border-radius: 30%;
 }
 .gmail-content {
@@ -273,7 +295,7 @@ a[title="gmail"]:hover .gmail-content {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 10px;
   background-color: #efefef;
   text-align: center;
 }

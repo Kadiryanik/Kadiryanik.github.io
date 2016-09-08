@@ -1,0 +1,63 @@
+/* Usage
+<div id="gmail">
+	<div id="gmail-text">
+		<br/>
+		<b>Gmailler</b>
+		<br/><br/>
+		adresler
+		<br/><br/>
+	</div>
+</div>
+*/
+
+
+#gmail{ 
+	position:fixed; 
+	bottom:65px; 
+	left:10px; 
+	width:60px;
+	height:40px; 
+	background:transparent url(../img/icons/Gmail.png) no-repeat center center; 
+	transition: all 0.8s ease-in-out; 
+	background-size:cover; 
+	-webkit-transition: all 0.8s ease-in-out; 
+	transition-timing-function:ease-in-out; 
+	-webkit-transition-timing-function:ease-in-out; 
+} 
+#gmail:hover{ 
+	bottom:70px;
+	left:25px; 
+	width:45px;
+	height:30px; 
+	transform: rotate(720deg); 
+	-ms-transform: rotate(720deg); 
+	-webkit-transform: rotate(720deg); 
+}
+#gmail-text{
+	position:absolute;
+	bottom:31px;
+	left:45px; 
+	box-shadow: -1px 1px 5px 0px #888888; 
+	transition: all 0.8s ease-in-out; 
+	-webkit-transition: all 0.8s ease-in-out; 
+	transition-timing-function:ease-in-out; 
+	line-height:22px; 
+	-webkit-transition-timing-function:ease-in-out; 
+	opacity:0; 
+	width:0px;
+	height:0px; 
+	padding:6px;
+	color:#fff; 
+	font-family:Helvetica, Arial, sans-serif; 
+	font-weight:normal; 
+	text-decoration:none; 
+	font-size:14px; 
+	text-align:center; 
+	-webkit-border-radius: 8px; 
+	-webkit-border-bottom-left-radius: 0;
+	border-radius: 8px; 
+	border-bottom-left-radius: 0; 
+	}
+
+#gmail:hover 
+#gmail-text{ width:200px;height:150px; background:#444; opacity:0.6;} 
