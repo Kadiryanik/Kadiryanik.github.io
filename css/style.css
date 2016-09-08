@@ -173,6 +173,7 @@ a{
 .header li a:hover:not(.active) {
     color:white;
 	background-color: #09f;/*ddd*/
+	transition: 0.3s;
 }
 
 .header li a.active {
