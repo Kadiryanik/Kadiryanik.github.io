@@ -199,12 +199,12 @@ a{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	transition: 0.3s;
 }
 
 .header li a:hover:not(.active) {
     color:white;
 	background-color: #09f;/*ddd*/
-	transition: 0.3s;
 }
 
 .header li a.active {
