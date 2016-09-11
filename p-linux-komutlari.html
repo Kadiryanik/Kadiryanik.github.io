@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+		<title>Temel Linux Komutları</title>
+		<link rel="icon" type="image/png" href="img/icon.png"/>
+		<meta name="Keywords" content="linux kullanım, linux, linux komutları"/>
+		<meta name="Copyright" content="Kadir Yanık © 2016"/> 
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="allinthis">
+			<div class="header">
+				<ul>
+					<li><a href="http://kadiryanik.me">AnaSayfa</a></li>
+					<li><a href="http://kadiryanik.me/works">Çalışmalar</a></li>
+					<li style="float:right"><a href="http://kadiryanik.me/about">Hakkında</a></li>
+					<li style="float:right"><a href="http://kadiryanik.me/team">Takım</a></li>
+				</ul>
+			</div>
+			<div class="pages_content">
+				
+				<h2 style="width:421px;">Neden Linux'u Komutlarla Kullanmalıyım?</h2>
+				<p>Öncelikle <strong>linux</strong> sadece komutlarla çalışan bir sistem değildir. Buna bağlı olarak çoğumuzda alışagelmiş <b>Windows</b> işletim sistemine
+				aşinalıktan olsa gerek; <b>linux</b>'uda görsel olarak kullanmaya çalışıyoruz. <strong>Linux</strong>'da dosyalar arasında gezinmektense 2 komutla tüm 
+				işimizi halledebiliriz. Arama işlemleri yine bu sevide daha hızlı. Bunlar sadece birkaç örnek tabi. Siber güvenlikle ilgilenen arkadaşlar
+				bilir her zaman görsel bir arayüzle karşılaşmıyorsunuz. Girilen sistemde bir konsol üstünde çalışmanız gerekebiliyor -ki genelde 
+				böyle oluyor. Bu yüzden hem hız hem heryerde geçerli bir sisteme alışmamak neden? Dilerseniz başlangıç için yeterli olacağını 
+				düşündüğüm komutlarla sizi baş başa bırakayım. Giriş seviyesi için özenle seçilmiş komutlar ve kısayollardır.</p>
+				
+				<h3 style="width:142px;">Temel Komutlar</h3>
+				<div class="pages_command">
+					<b>abcd --help</b> - <em>"abcd" komutu hakkında -varsa- bilgilendirme gösterir</em><br/>
+					<b>man</b> - <em>help komutuna benzerdir</em><br/>
+					clear - Terminal ekranını temizler</em><br/><br/>
+					
+					<b>ls</b> - <em>İçinde bulunulan dizinin içeriğini listeler</em><br/>
+					<b>ls -al</b> - <em>İçinde bulunulan dizindeki gizli dosyalar dahil bütün dosyaları gösterir</em><br/>
+					<b>ls -al | more</b> - <em>Buradaki more komutu çıktı ekrana sığmadığı durumlarda kullanılabilir</em><br/><br/>
+					
+					<b>cd abcd</b> - <em>"abcd" dizinine geçilir, dizin verilmezse ev dizinine geçilir</em><br/>
+					<b>find /home -name "abcd"</b> - <em>"abcd" dosyasını /home dizinden itibaren aramaya başlar</em><br/><br/>
+					<b>cp kaynak hedef</b> - <em>"kaynak" dosyasını "hedef" dizinine kopyalar<br/>
+					Komutlarda sıralama genelde bu şekildedir önce kaynak sonra hedef</em><br/>
+					<b>rm abcd</b> - <em>"abcd" dosyasını siler</em><br/>
+					<b>mkdir abcd</b> - <em>"abcd" dizinini oluşturur</em><br/>
+					<b>rmdir abcd</b> - <em>"abcd" dizini boşsa silinir</em><br/>
+					<b>rm -r abcd</b> - <em>"abcd" dizinindeki, dosya ve dizinleri siler. Root olarak kullanırken dikkat edin herşeyi silebilirsiniz</em><br/><br/>
+					
+					<b>chgrp</b> - <em>Grubu degistirir</em><br/>
+					<b>chmod</b> - <em>Bir dosyanın haklarını değiştirir</em><br/>
+					<b>chown</b> - <em>Bir dosyanın sahiplerini değiştirir</em><br/><br/>
+					
+					<b>cat abcd</b> - <em>"abcd" dosyasını görüntülemek için kullanılır</em><br/>
+					<b>less abcd</b> - <em>cat komuta eşdeğerdir, biraz daha fazla özelliği vardır</em><br/>
+					<b>vim abcd</b> - <em>"abcd" dosyasını vim editörüyle açar, nano, pico gibi editörlerde mevcut fakat en gelişmişi vimdir</em><br/>
+					<b>touch abcd.txt</b> - <em>"abcd" dosyasının oluşturulma ve düzenleme tarih bilgilerini şu anki tarihe değiştirir<br/>
+					Eğer yoksa abcd.txt isimli dosyayı oluşturur</em><br/><br/>
+					
+					<b>shutdown -h now</b> <em>veya</em> <b>halt</b> - <em>Sistemi durdurur.</em><br/>
+					<b>shutdown -r now</b> <em>veya</em> <b>reboot</b> - <em>Sistemi yeniden başlatır.</em><br/>
+				</div>
+				
+				<h3 style="width:147px;">Temel Kısayollar</h3>
+				<div class="pages_command">
+					<b>J</b> - <em>Bir sonraki satırı, imlecin üstünde durduğu satırın sonuna taşır</em><br/>
+					
+					<b>Tab</b> -  <em>Yazmakta olduğunu yeri tamamlar, eğer tamamlamıyorsa, yazdığınız kısımla başlayan birden fazla dosya/komut/dizin vardır<br/>
+					2 kere tab yaparak o isimle devam edenleri görüntüleyebilirsiniz</em><br/><br/>
+					
+					<b>Shift</b> + <b>PgUp</b> - <em>Terminal çıktısında yukarı hareket etmenizi sağlar</em><br/>
+					<b>Shift</b> + <b>PgDown</b> -  <em>Terminal çıktısında yukarı hareket etmenizi sağlar</em><br/><br/>
+					
+					<b>Ctrl</b> + <b>C</b> - <em>Mevcut komutu durdur. Genelde konsoldaki basit komutlar için kullanılır</em><br/>
+					<b>Ctrl</b> + <b>Z</b> - <em>Çalışmakta olan komutu arka plana gönderir</em><br/><br/>
+					
+					<b>Ctrl</b> + <b>S</b> - <em>Terminale olan çıkışı durdurur</em><br/>
+					<b>Ctrl</b> + <b>Q</b> - <em>Terminale olan çıkışa devam eder</em><br/><br/>
+					
+					<b>Ctrl</b> + <b>Shift</b> + <b>C</b> - <em>Kopyalama</em><br/>
+					<b>Ctrl</b> + <b>Shift</b> + <b>V</b> - <em>Yapıştırma</em><br/>
+					<b>Shift</b> + <b>Insert</b> - <em>Yapıştırma işlemini klavyeden yapar</em><br/>
+				</div>
+				
+				<h3 style="width:205px;">Bilgi Edinme Komutları</h3>
+				<div class="pages_command">
+					<b>pwd</b> - <em>Bulunduğunuz dizinin ismini verir</em><br/>
+					<b>tty</b> - <em>Bu komutu yazdığınız terminalin ismini bildirir</em><br/>
+					<b>file abcd</b> - <em>"abcd" dosyası hakkında bilgi verir</em><br/><br/>
+					
+					<b>who</b> - <em>O an sistemde bulunan kullanıcıların kullanıcı isimlerini, hangi uçbirimlerde çalıştıklarını ve sisteme giriş tarih ve saatlerini gösterir</em><br/>
+					<b>whoami</b> - <em>Açık olan oturumun kullanıcı ismini verir</em><br/>
+					<b>id abcd</b> - <em>"abcd" kullanıcısının kullanıcı kimliği, birincil grup kimliği ve üyesi olduğu grupları gösterir</em><br/>
+					<b>finger abcd</b> - <em>"abcd" kullanıcısı hakkında bilgi verir</em><br/>
+					<b>hostname</b> - <em>Cihazın konak adresini verir</em><br/><br/>
+					
+					<b>date</b> - <em>Sistem tarihi göstermek ya da değiştirmek için kullanılır</em><br/>
+					<b>time</b> - <em>Belli bir komutun işlemini bitirmesinin ne kadar süre tuttuğunu gösterir</em><br/>
+					Bir dizinin listelenme süresini <b>time ls</b> ile öğrenebilirsiniz</em><br/>
+					<b>uptime</b> - <em>Makinanın ne kadar süredir açık olduğu bilgisini verir.</em><br/><br/>
+					
+					<b>last</b> - <em>Sisteme en son giriş yapmış kullanıcıların bugünden geriye doğru listesini verir</em><br/>
+					<b>more</b> - <em>Uzun çıktı beklediğiniz komutların sonuna <b>| more</b> şeklinde ekleyerek, çıktıyı sayfa sayfa görüntüleyebilirsiniz</em><br/><br/>
+					
+					
+					<b>ps</b> - <em>Kullanıcının kullandığı uçbirimde çalıştırmakta olduğu komutların ve süreçlerin listesi</em><br/>
+					<b>top</b> - <em>Temel sistem durumu, çalışmakta olan süreçler ne kadar bellek/işlemci kullandıkları vs.</em><br/>
+					<b>free</b> - <em>Bellek kullanımını gösterir</em><br/><br/>
+					
+					<b>uname-a</b>  - <em>Sistem hakkında çekirdek sürümünü, işlemci türü gibi bilgiler</em><br/>
+					<b>lsmod</b> - <em>Yüklü çekirdek modüllerinin listesi</em><br/>
+					<b>df -h</b> - <em>Bağlı sabit disk bölümlerinin doluluk oranlarını gösterir.</em><br/>
+					<b>du -sk abcd</b> - <em>"abcd" dizininin (belirtilmezse bulunduğunuz dizinin) içeriğinin diskte kapladığı alanın kB cinsinden boyutunu verir</em><br/><br/>
+
+					<b>cat /proc/interrupts</b> - <em>Çekirdek tarafından tanımlanmış sistem kesmelerinin listesi</em><br/>
+					<b>cat /proc/version</b> - <em>Linux çekirdeğinin sürüm bilgileri</em><br/>
+					<b>cat /proc/filesystems</b> - <em>Çekirdekte tanımlı kullanılabilecek dosya sistemlerinin listesi</em><br/><br/>
+
+					<b>declare</b> - <em>Kabukta tanımlı ortam değişkenlerinin tümünün listesini verir</em><br/>
+					<b>echo x > abcd.txt</b> - <em>"abcd.txt" dosyasına x yazdırır</em><br/>
+					<b>komut > abcd.txt</b> - <em>"komut" komutu yerine istediğiniz komutu yazıp çıktıları "abcd.txt" dosyasına aktarabilirsiniz</em><br/>
+					<b>dmesg</b> - <em>Tampondaki son sistem iletileri gösterir</em><br/>
+				</div>
+				
+				<h3 style="width:237px;">Dosya Sıkıştırma Komutları</h3>
+				<div class="pages_command">
+					<b>gzip -x abcd</b> - <em>"abcd" dosyası "x" seviyesinde sıkıştırılır ve abcd.gz dosyasına dönüştürülür<br/>
+					x 1-9 arasında değer alabilir, 9 en iyi sıkıştırma</em><br/>
+					<b>gunzip abcd.gz</b> - <em>"abcd.gz" dosyasını dosya olarak açar</em><br/><br/>	
+					
+					<b>bzip2 abcd</b> - <em>"abcd" dosyasını en iyi şekilde sıkıştırır ve dosya.bz2 haline getirir<br/>
+					Çoğunlukla gzip'den daha iyi sıkıştırır</em><br/>
+					<b>bunzip2 abcd.bz2</b> - <em>"abcd.bz2" dosyasını dosya olarak açar</em><br/><br/>
+					
+					<b>tar -xvf abcd.tar</b> - <em>"abcd.tar" gibi belirtilen (sıkıştırılmamış) arşiv dosyasını bulunulan dizine açar</em><br/>					
+					<b>tar -zxvf abcd.tar.gz</b> - <em>"abcd.tar.gz" gibi belirtilen (sıkıştırılmış) arşiv dosyasını bulunulan dizine açar</em><br/>					
+					<b>tar -zxvf abcd.tar.gz -C hedef</b> - <em>Sıkıştırılmış arşiv dosyasını belirtilen dizine açar</em><br/>					
+					<b>tar -jxvf abcd.tar.bz2 -C hedef</b> - <em>"abcd.tar.bz2"belirtilen dizin e açar (Eski sürümlerde -Ixvf kullanılırdı)</em><br/>				
+					<b>tar -zcvf sonisim.tar.gz abcd1 abcd2</b> - <em>Belirtilen dizin ve/veya dosyaları sıkıştırıp sonisim.tar.gz haline getirir</em><br/>					
+					<b>unzip abcd.zip -d hedef</b> - <em>"abcd.zip" arşivini belirtilen "hedef" dizinine açar</em><br/>
+				</div>
+				
+				
+				<p>Bu sayfa linux kullanmaya yeni başlayanlara kolaylık sağlaması amacıyla hazırlanmıştır. Umarım 
+				faydalı olmuştur. Başka başlıkta görüşmek üzere İyi günler, verimli vakitler..</p>
+				
+			</div>
+		</div>
+		<div class="footer">Kadir Yanık &copy; 2016<br/><font size="1">All right reserved.</font></div>
+	</body>
+</html>
