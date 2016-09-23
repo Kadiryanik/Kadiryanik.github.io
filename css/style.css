@@ -540,15 +540,16 @@ a{
 /*-------------------------Team end-------------------------------*/
 /*-------------------------Pages Start----------------------------*/
 .pages_allinthis{
-	  margin: 0 auto;
-  padding-top:0px;
+  margin: 0 auto;
+  padding-top:41px;/*31*/
+  padding-bottom:50px;
   max-width: 100%;
   background-color:#fff;
   width: 100%;
   clear: both;
 }
 .pages_content{
-	margin:60px auto;
+	margin:0px auto;
 	font-family:'Playfair Display';
 	width:900px;
 	/*height koyulabilir*/
@@ -595,7 +596,7 @@ a{
   bottom: 0;
   left: 0;
   padding: 10px;
-  background-color:#fff;
+  background-color:#efefef;
   text-align: center;
   transition:0.3s;
 }
