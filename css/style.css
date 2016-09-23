@@ -539,6 +539,14 @@ a{
 
 /*-------------------------Team end-------------------------------*/
 /*-------------------------Pages Start----------------------------*/
+.pages_allinthis{
+	  margin: 0 auto;
+  padding-top:0px;
+  max-width: 100%;
+  background-color:#fff;
+  width: 100%;
+  clear: both;
+}
 .pages_content{
 	margin:60px auto;
 	font-family:'Playfair Display';
@@ -579,6 +587,22 @@ a{
 }
 .pages_links a:hover{
 	color:#09f;
+}
+.pages_footer {
+  font-size:12px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color:#fff;
+  text-align: center;
+  transition:0.3s;
+}
+.pages_footer:hover {
+  color:#09f;
+  font-size:13px;
+  transition:0.3s;
 }
 /*-------------------------Pages end------------------------------*/
 
