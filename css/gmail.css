@@ -13,10 +13,10 @@
 
 #gmail{ 
 	position:fixed; 
-	bottom:40px; 
-	left:10px; 
-	width:60px;
-	height:40px; 
+	bottom:70px; 
+	left:20px; 
+	width:39px;
+	height:23px; 
 	background:transparent url(../img/icons/Gmail.png) no-repeat center center; 
 	transition: all 0.8s ease-in-out; 
 	background-size:cover; 
@@ -25,18 +25,18 @@
 	-webkit-transition-timing-function:ease-in-out; 
 } 
 #gmail:hover{ 
-	bottom:50px;
-	left:17px; 
-	width:45px;
-	height:30px; 
+	bottom:65px;
+	left:15px; 
+	width:51px;
+	height:32px; 
 	transform: rotate(720deg); 
 	-ms-transform: rotate(720deg); 
 	-webkit-transform: rotate(720deg); 
 }
 #gmail-text{
 	position:absolute;
-	bottom:31px;
-	left:45px; 
+	bottom:32px;
+	left:50px; 
 	box-shadow: -1px 1px 5px 0px #888888; 
 	transition: all 0.8s ease-in-out; 
 	-webkit-transition: all 0.8s ease-in-out; 
@@ -60,4 +60,4 @@
 	}
 
 #gmail:hover 
-#gmail-text{ width:200px;height:150px; background:#444; opacity:0.6;} 
+#gmail-text{ width:200px;height:150px; background:rgba(178,049,033,0); opacity:1;} 
