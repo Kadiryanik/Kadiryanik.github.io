@@ -434,6 +434,7 @@ a{
 	text-align:center;
 }
 .team_cart{
+	color:rgba(255,255,255,0.3);
 	margin:0 5px 0 5px;
 	height:400px;
 	width:300px;
@@ -452,7 +453,9 @@ a{
 	height:200px;
 }
 .team_cart h3{
+	color:rgba(255,255,255,0.7);
 	font-size:17px;
+	transition:0.3s;
 }
 .team_cart .team_links{
 	position:relative;
@@ -461,9 +464,15 @@ a{
 }
 
 .team_cart:hover{
+	color:rgba(255,255,255,0.8);
 	border-color:rgba(000,190,255,0.6);
 	transition:0.3s;
 }
+.team_cart:hover h3{
+	color:rgba(255,255,255,0.9);
+	transition:0.3s;
+}
+
 /*-------------------------Links Trans---------------------------*/
 .social-nav {
   padding: 0;
