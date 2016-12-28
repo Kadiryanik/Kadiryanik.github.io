@@ -110,15 +110,16 @@ a{
 }
 .index_buttons{
 	position:relative;
+	background-color:black;
 	font-size:14;
 	height:90px;
 	padding-top:5px;
 	width:100%;
-	min-width:605px;
+	min-width:610px;
 	clear: both;
 }
 .index_buttons li {
-	padding-right:75px;
+	padding-right:70px;
     float: left;
 }
 
