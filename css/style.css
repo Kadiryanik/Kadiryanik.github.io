@@ -224,6 +224,14 @@ a{
 	min-width:25%;
 	
 }
+.about_contanier a{
+	color:#09e;
+
+}
+.about_contanier a:hover{
+	color:#3bf;
+		
+}
 .about_right_side{
 	position:relative;
 	text-align:center;
