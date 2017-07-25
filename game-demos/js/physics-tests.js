@@ -81,7 +81,7 @@ class Game{
 		}
 		
 		if(!(this._ball.falling)){
-			this._ball.vel.y *= 0.99;
+			this._ball.vel.y *= 0.975;
 			this._ball.pos.y += this._ball.vel.y * delta;
 			if(this._ball.vel.y > -3){
 				this._ball.falling = true;
@@ -96,7 +96,7 @@ class Game{
 	collision(ball){
 		if(this._canvas.height < ball.pos.y + ball.radius){
 			ball.falling = false;
-			ball.vel.y = -ball.vel.y * 0.40;
+			ball.vel.y = -ball.vel.y * 0.75;
 			ball.pos.y = this._canvas.height - ball.radius;
 		}
 	}
