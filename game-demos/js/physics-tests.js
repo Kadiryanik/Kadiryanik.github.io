@@ -25,10 +25,11 @@ class Circle{
 }
 
 class Ball extends Circle{
-	constructor(x, y){
-		super(x, y, 20);
+	constructor(x, y, c, r){
+		super(x, y, r);
 		this.vel = new Vec;
 		this.falling = true;
+		this.color = c;
 	}
 }
 
@@ -37,7 +38,7 @@ class Game{
 		this._canvas = canvas;
 		this._context = canvas.getContext("2d");
 
-		this._ball = new Ball(240, 100);
+		this._balls = [];
 
 		let lastTime;
 		const callback = (millis) => {
@@ -46,64 +47,62 @@ class Game{
 				this.update((millis - lastTime) / 1000);
 			}
 			lastTime = millis;
-			requestAnimationFrame(callback); 
+			requestAnimationFrame(callback);
 		};
 		callback();
 	}
-	draw(ball){
+	draw(){
 		this._context.fillStyle = '#fff';
 		this._context.fillRect(0, 0, this._canvas.width, this._canvas.height);
+	}
+	updateAll(ball, delta){
+		if(ball.falling){
+			ball.vel.y *= 1.2;
+			ball.pos.y += ball.vel.y * delta;
+			if(ball.pos.y + ball.radius + 1 > this._canvas.height &&
+				ball.vel.y < 60){
+				ball.vel.y = 0;
+				ball.pos.y = this._canvas.height - ball.radius;
+			}
+		}
+		
+		if(!(ball.falling)){
+			ball.vel.y *= 0.80;
+			ball.pos.y += ball.vel.y * delta;
+			if(ball.vel.y > -20){
+				ball.falling = true;
+				ball.vel.y = 30;
+			}
+		}
 
+		ball.pos.x += ball.vel.x;
+
+		// collision
+		if(this._canvas.height < ball.pos.y + ball.radius){
+			ball.falling = false;
+			ball.vel.y = -ball.vel.y * 0.90;
+			ball.pos.y = this._canvas.height - ball.radius;
+		}
+		if(this._canvas.width < ball.pos.x + ball.radius || 0 > ball.pos.x - ball.radius){
+			ball.vel.x = -ball.vel.x;
+		}
+		
 		// Set drawing color
-		this._context.fillStyle = '#000';
-
-		// Draw Ball
+		this._context.fillStyle = ball.color;
+		// Draw balls
 		this._context.beginPath();
 		this._context.arc(ball.pos.x, ball.pos.y, ball.radius, 0, 2 * Math.PI);
 		this._context.fill();
-
-		this._context.fillStyle = "rgb(60, 200, 180)";
-		this._context.font = "24px Helvetica";
-		this._context.textAlign = "left";
-		this._context.textBaseline = "top";
-		this._context.fillText("Speed: " + (this._ball.vel.y).toFixed(2), 200, 16);
-		this._context.fillText("Height: " + (this._canvas.height - this._ball.pos.y - this._ball.radius).toFixed(2), 10, 16);
 	}
 	update(delta){
-		if(this._ball.falling){
-			this._ball.vel.y *= 1.01;
-			this._ball.pos.y += this._ball.vel.y * delta;
-			if(this._ball.pos.y + this._ball.radius + 1 > this._canvas.height &&
-				this._ball.vel.y < 10){
-				this._ball.vel.y = 0;
-				this._ball.pos.y = this._canvas.height - this._ball.radius;
-			}
-		}
-		
-		if(!(this._ball.falling)){
-			this._ball.vel.y *= 0.975;
-			this._ball.pos.y += this._ball.vel.y * delta;
-			if(this._ball.vel.y > -3){
-				this._ball.falling = true;
-				this._ball.vel.y = 5;
-			}
-		}
-		
-		this.collision(this._ball);
 		// Draw objects
-		this.draw(this._ball);
+		this.draw();
+		this._balls.forEach(ball => this.updateAll(ball, delta));
 	}
-	collision(ball){
-		if(this._canvas.height < ball.pos.y + ball.radius){
-			ball.falling = false;
-			ball.vel.y = -ball.vel.y * 0.75;
-			ball.pos.y = this._canvas.height - ball.radius;
-		}
-	}
-	start(){
-		if(this._ball.vel.x === 0 && this._ball.vel.y === 0){
-			this._ball.vel.x = 0;
-			this._ball.vel.y = speed;
+	start(ball){
+		if(ball.vel.x === 0 && ball.vel.y === 0){
+			ball.vel.x = (Math.random() * 10) - 5; // +-5
+			ball.vel.y = speed;
 		}
 	}
 }
@@ -115,6 +114,13 @@ canvas.style.margin = "auto";
 const speed = 100;
 const game = new Game(canvas, speed);
 
+for (var i = 0; i < 100; i++) {
+	game._balls.push(new Ball(Math.random() * game._canvas.width, 
+							  Math.random() * game._canvas.height, 
+							  '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6),
+							  5 + (Math.random() * 30)));
+}
+
 canvas.addEventListener('click', event => {
-	game.start();
+	game._balls.forEach(ball => game.start(ball));
 });
