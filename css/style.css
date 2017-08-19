@@ -83,7 +83,6 @@ a{
 }
 .index_content{
 	margin:auto;
-	top: 20%;
 	height:300px;
 	width:605px;
 	left: 0;
@@ -98,18 +97,6 @@ a{
 	border-radius: 50%;
 	width: 200;
 	height: 200;
-}
-.index_content > h1{
-	color:#333;
-	text-shadow: -2px 0 #09f, 0 1px #09f, 1px 0 #09f, 0 -1px #09f;
-	font-size:50px;
-	transition: 0.4s;
-}
-.index_content > h1:hover:not(.active) {
-	color:#333;
-	text-shadow: -1px 0 #09f, 0 1px #09f, 2px 0 #09f, 0 -1px #09f;
-	font-size:50px;
-	transition: 0.4s;
 }
 .index_buttons ul {
 	padding-left:75px;
@@ -138,7 +125,6 @@ a{
 	background-color: rgba(051,051,051,0.3);
     text-decoration: none;
 	min-width:100px;
-    transition: 0.4s;
 }
 .index_buttons li a:hover:not(.active) {
 	background-color: rgba(000,153,255,0.6);
