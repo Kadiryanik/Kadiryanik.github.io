@@ -8,7 +8,7 @@ canvas.width = window.innerWidth;
 var font_size = 9;
 
 // Charecter set
-var text = "0123456789ABCDE";
+var text = "0123456789ABCDEF";
 text = text.split("");
 
 //number of columns for the rain

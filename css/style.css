@@ -125,6 +125,7 @@ a{
 	background-color: rgba(051,051,051,0.3);
     text-decoration: none;
 	min-width:100px;
+	transition:0.4s;
 }
 .index_buttons li a:hover:not(.active) {
 	background-color: rgba(000,153,255,0.6);
