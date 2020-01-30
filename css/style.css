@@ -24,8 +24,14 @@ p{
 .allinthis {
   padding-top:0px;
   margin: 0 auto;
-  max-width: 100%;
   background:url(../img/back.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  min-width: 1600px;
+  min-height: 650px;
   width: 100%;
   clear: both;
 }
@@ -210,11 +216,7 @@ a{
 .about_contanier > img{
 	display: block;
 	float:left;
-	min-height:45%;
-	width:25%;
-	max-width:400px;
-	min-width:25%;
-	
+	width:20%;	
 }
 .about_contanier a{
 	color:#09e;
@@ -238,7 +240,7 @@ a{
 	position:relative;
 	display: inline-block;
 	padding:0px auto;
-	margin-left:15px;
+	margin-left:0px;
 	height:53px;
 	max-width:280px;
 	min-width:280px;
@@ -250,7 +252,7 @@ a{
 	top:50px;
 	left:3%;
 	height:500px;
-	width:45%;
+	width:50%;
 	min-width:40%;
 }
 /*-------------------------About end--------------------------------*/
@@ -260,7 +262,7 @@ a{
 	padding-top:48px;
 	position:relative;
 	float:left;
-	background:url(../img/back.jpg) no-repeat center center fixed;
+	background:url(../img/back.jpg);
 	width:4000px;						/*sayfa sayisi * 2200(.section width)*/
 	height:80%;
 }
@@ -416,13 +418,15 @@ a{
     background-color: #4CAF50;
 }
 .team_allinthis{
-  margin: 0 auto;
-  padding-top:0px;
-  max-width: 100%;
   background:url(../img/back.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 1080px;
+  min-height: 600px;
   height:100%;
   width: 100%;
-  
 }
 .team_content{
 	position:relative;
