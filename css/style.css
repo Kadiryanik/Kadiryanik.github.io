@@ -22,10 +22,10 @@ p{
 }
 /*--------------------------defaults-----------------------------*/
 .allinthis {
-  margin: 0 auto;
   padding-top:0px;
+  margin: 0 auto;
   max-width: 100%;
-  background-image:url(../img/back.jpg);
+  background:url(../img/back.jpg) no-repeat center center fixed;
   width: 100%;
   clear: both;
 }
@@ -260,7 +260,7 @@ a{
 	padding-top:48px;
 	position:relative;
 	float:left;
-	background-image:url(../img/back.jpg);
+	background:url(../img/back.jpg) no-repeat center center fixed;
 	width:4000px;						/*sayfa sayisi * 2200(.section width)*/
 	height:80%;
 }
@@ -419,7 +419,7 @@ a{
   margin: 0 auto;
   padding-top:0px;
   max-width: 100%;
-  background-image:url(../img/back.jpg);
+  background:url(../img/back.jpg) no-repeat center center fixed;
   height:100%;
   width: 100%;
   

@@ -21,6 +21,24 @@ var drops = [];
 for(var x = 0; x < columns; x++)
 	drops[x] = 1;
 
+function resizeCanvas(){
+	if (canvas.width  < window.innerWidth){
+		canvas.width  = window.innerWidth;
+	}
+	if (canvas.height < window.innerHeight){
+		canvas.height = window.innerHeight;
+	}
+
+	//number of columns for the rain
+	columns = canvas.width / font_size;
+
+	//x below is the x coordinate
+	for(var x = 0; x < columns; x++)
+		drops[x] = 1;
+}
+
+window.onresize = resizeCanvas;
+
 function draw(){
 	// This way to shows last frames
 	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
