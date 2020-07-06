@@ -7,26 +7,97 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$('a').bind('click', function(event) {
+					var $anchor = $(this);
+					$('html, body').stop().animate({
+					  scrollTop: $($anchor.attr('href')).offset().top
+					}, 1000);
+					event.preventDefault();
+				});
+			});
+
+			$(window).scroll(function () {
+		        $('.section').each(function () {
+		        	var offset = 200;
+		            if($(this).position().top - offset <= $(document).scrollTop() && ($(this).position().top + $(this).outerHeight()) > $(document).scrollTop()) {
+		                var id = $(this).attr('id');
+		                $('#nav a').removeClass('focus');
+						$("#nav a[href=#"+id+"]").get(0).focus();
+		            }
+		        });
+		    });
+
+			window.onload = function() {
+				$("#nav a[href=#home]").get(0).focus();
+			};
+			/*
+				TODO: 
+				 - rename all again
+				 - transparent_header -> navigation will change
+			*/
+		</script>
 	</head>
 
 	<body>
-		<div class="index-allinthis">
-			<div id="index-content" class="index_content">
-				<img src="img/kadir-homepage.jpg"> </img>
-				<div class="index_buttons">
+		<div class="allinthis" style="min-height: 0px">
+			<div id="nav" class="transparent_header">
 				<ul>
-					<li><a href="http://Kadiryanik.github.io/about">Hakkında</a></li>
-					<li><a href="http://Kadiryanik.github.io/docs">Dökümanlar</a></li>
-					<li><a href="http://Kadiryanik.github.io/team">Takım</a></li>
+				  <li><a href="#home">AnaSayfa</a></li>
+				  <li><a href="#about">Hakkında</a></li>
+				  <li><a href="#contact">İletişim</a></li>
 				</ul>
-				</div>
 			</div>
-		</div>
-		<canvas id="canvas-matrix" style="z-index: 1"></canvas>
-		<script type="text/javascript" src="js/div-position.js"></script>
-		<script type="text/javascript" src="js/matrix.js"></script>
 
-		<div class="index_footer">Kadir Yanık &copy; <script type="text/javascript"> document.write(new Date().getFullYear());</script><br/><font size="1">All right reserved.</font></div>
+			<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+			<div class="all_content">
+				<section class="section" id="home">
+					<div class="index_allinthis">
+						<div id="index-content" class="index_content">
+							<img src="img/kadir-homepage.jpg"> </img>
+							<h1>Kadir Yanık</h1>
+							<h5>Bilgisayar Mühendisi</h5>
+						</div>
+					</div>
+					<script type="text/javascript" src="js/div-position.js"></script>
+				</section>
+
+				<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+				<section class="section" id="about">
+					<div class="about_contanier">
+						<img src="img/kadir-seffaf.png"/>
+						
+						<div class="about_info">
+							<center><h4>Ben Kimim?</h4></center>
+							<p><em>Ben Kadir Yanık<em>, 94 <strong>Rize</strong> doğumluyum. <strong>Karadeniz Teknik Üniversitesi</strong> Bilgisayar Mühendisliği (2018) mezunuyum. Yine aynı üniversitede ve bölümde yüksek lisansımı yapıyorum (2019-).	01-2017, 06-2020 tarih aralığında <a href="http://mavialp.com" target="_blank">Mavi Alp</a> şirketinde IoT haberleşme protokolü (<a href="https://datatracker.ietf.org/wg/6tisch/about" target="_blank">6TiSCH</a>) ve gömülü sistemler üzerinde çalıştım. <br/><br/></p><p>Gömülü sistemler, görüntü işleme ve makine öğrenimi alanlarıyla alakalı yeni şeyler öğrenmekten keyif alıyorum. Üzerinde birşeyler geliştirdiğim diller şu şekilde <strong>C</strong>, <strong>C++</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>Java-Script</strong>, <strong>Go</strong>. Sıralama kendimi kod yazarken daha rahat hissettiğim dilden daha az rahat hissettiğim dile olacak şekildedir.<br/><br/></p>
+							<p>Mesleki hayatım dışında müzikle uğraşmayı seviyorum, bir kaç enstürman da icra edebiliyorum. Günlük yaşantım çoğu zaman bilgisayar karşısında geçiyor :)</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+				<section class="section" id="contact">
+					<div class="contact_content">
+						<h2>Bana Ulaşın</h2>
+						<div class="contact_buttons">
+							<ul class="social-nav model-2">
+								<li><a href="https://tr.linkedin.com/in/kadir-yanık-9a4b61127" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://github.com/Kadiryanik" class="github" target="_blank"> <i class="fa fa-github"></i></a></li>
+								<br/>
+								<br/>
+								kdrynkk@gmail.com
+							</ul>
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>	
+
+		<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+		<div class="footer">Kadir Yanık &copy; <script type="text/javascript"> document.write(new Date().getFullYear());</script><br/><font size="1">All right reserved.</font></div>
 	</body>
 
 </html>

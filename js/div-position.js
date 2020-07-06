@@ -16,7 +16,7 @@ function draw(){
 
 	for(i = 0.01; i < 0.8; i += 0.01){
 		if(_top > window.innerHeight * (1 - i)){
-			content.style.opacity = i;
+			content.style.opacity = 0.9;
 			break;
 		}
 	}
