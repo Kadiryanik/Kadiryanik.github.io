@@ -64,6 +64,7 @@ a{
 	margin:auto;
 	height:300px;
 	width:605px;
+	top: 12%;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -82,14 +83,21 @@ a{
 .index_content h1{
 	font-size: 30px;
 	padding-bottom: 0px;
-	color: white;
+	color: #efefef;
 }
 
 .index_content h5{
-	font-size: 10px;
+	font-size: 14px;
 	padding-top: 0px;
-	color: white;
+	color: #efefef;
 }
+
+.console
+{
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+
 /*---------------------------index End------------------------------*/
 /*--------------------------About Page------------------------------*/
 .about_contanier{
