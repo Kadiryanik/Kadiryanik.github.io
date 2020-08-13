@@ -12,7 +12,7 @@ html {
 body {
   position: relative;
   margin:0;
-  background-color:#ffffff;
+  background:url(../img/back.jpg) no-repeat fixed 100%;
   min-height: 100%;
   min-width: 100%;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -33,8 +33,6 @@ p{
   margin: 0px;
   width: 100%;
   height: 100%;
-
-  background:url(../img/back.jpg) repeat fixed 100%;
 }
 
 .allinthis {
@@ -51,9 +49,6 @@ a{
 	*{
 		margin: 0; 
 		padding: 0;
-	}
-	body {
-		background: #000;
 	}
 	canvas {
 		display: block;
