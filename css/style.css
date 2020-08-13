@@ -10,11 +10,13 @@ html {
 }
 
 body {
-  position: relative;
+  position: absolute;
   margin:0;
-  background:url(../img/back.jpg) no-repeat fixed 100%;
-  min-height: 100%;
-  min-width: 100%;
+  background:url(../img/back.jpg) no-repeat fixed;
+  background-size:cover;
+
+  height: 100%;
+  width: 100%;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 p{
@@ -32,7 +34,7 @@ p{
   position:relative;
   margin: 0px;
   width: 100%;
-  height: 100%;
+  height: 165vh;
 }
 
 .allinthis {
@@ -92,41 +94,41 @@ a{
   font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
-
 /*---------------------------index End------------------------------*/
 /*--------------------------About Page------------------------------*/
 .about_contanier{
 	margin:0 auto;
-	color:#fff;
-	padding-top:55px;
-	min-height:600px;
+	color: #fff;
+	padding-top:5%;
 	width:85%;
-	min-width:1550px;
 	height:100%;
-	z-index:3;
 	clear: both;
 }
 .about_contanier > img{
-	display: block;
-	float:left;
-	width:20%;
+	width:0px;
 }
 .about_contanier a{
 	color:#09e;
-
 }
 .about_contanier a:hover{
 	color:#3bf;
-		
 }
 .about_info{
 	position:relative;
-	float:left;
-	top:50px;
-	left:3%;
-	height:500px;
-	width:50%;
-	min-width:40%;
+	height:40%;
+	width:90%;
+}
+@media (min-width: 900px) {
+	.about_contanier > img{
+		display:block;
+		float:left;
+		width:280px;
+	}
+	.about_info{
+		float:left;
+		width:50%;
+		left:3%;
+	}
 }
 /*-------------------------About end--------------------------------*/
 .contact_content{
