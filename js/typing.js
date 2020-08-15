@@ -14,7 +14,7 @@ function type(cType) {
     if(cType == 0) {
         text = 'Kadir Yanık';
     } else {
-        text = 'Bilgisayar Mühendisi';
+        text = 'Computer Engineer';
     }
     typeStep(cType);
 }
