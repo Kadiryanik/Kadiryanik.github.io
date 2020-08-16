@@ -75,6 +75,7 @@ a{
 	border-radius: 50%;
 	width: 200;
 	height: 200;
+	opacity: 0.85;
 }
 
 .index_content h1{
@@ -123,6 +124,7 @@ a{
 		display:block;
 		float:left;
 		width:280px;
+		opacity: 0.85;
 	}
 	.about_info{
 		float:left;
