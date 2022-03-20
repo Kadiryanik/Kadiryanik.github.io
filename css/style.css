@@ -123,8 +123,9 @@ a{
 	.about_contanier > img{
 		display:block;
 		float:left;
-		width:280px;
-		opacity: 0.85;
+		margin-top: 5%;
+		width:300px;
+		opacity: 0.95;
 	}
 	.about_info{
 		float:left;
